@@ -46,7 +46,7 @@ class Menus_model extends BaseMenus_model implements Buyable
         if (empty($this->order_restriction))
             return FALSE;
 
-        $orderTypes = [AbstractLocation::DELIVERY => 1, AbstractLocation::COLLECTION => 2];
+        $orderTypes = [AbstractLocation::DELIVERY => 1, AbstractLocation::COLLECTION => 2,  AbstractLocation::TABLE => 3,  AbstractLocation::CLICKCOLLECT => 4];
 
         return array_get($orderTypes, $orderType, $orderType) != $this->order_restriction;
     }
