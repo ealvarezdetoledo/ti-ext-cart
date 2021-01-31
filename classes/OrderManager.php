@@ -266,6 +266,7 @@ class OrderManager
             'email' => $customer ? $customer->email : null,
             'telephone' => $customer ? $customer->telephone : null,
             'address_id' => $customer ? $customer->address_id : null,
+            'table_number' => "",
         ];
     }
 
