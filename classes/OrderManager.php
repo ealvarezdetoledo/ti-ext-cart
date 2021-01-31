@@ -179,7 +179,8 @@ class OrderManager
                 $this->customer->save();
             }
         }
-
+        $tableData = Session::get('thoughtco.tables');
+	    $order->table_number = $tableData['table'];
         $order->fill($data);
         $order->address_id = $addressId;
         $this->applyRequiredAttributes($order);
